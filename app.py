@@ -5,14 +5,11 @@ import joblib
 
 # Load CSS
 def load_css():
-    with open("DEADLOCK.css") as f:
-        st.markdown(
-            f"<style>{f.read()}</style>",
-            unsafe_allow_html=True
-        )
-
-
-load_css()
+    try:
+        with open("DEADLOCK.css") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except:
+        st.warning("CSS file not found")
 
 
 # Title
