@@ -4,12 +4,15 @@ import joblib
 
 
 # Load CSS
+import os
+import streamlit as st
+
 def load_css():
-    try:
-        with open("DEADLOCK.css") as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    except:
-        st.warning("CSS file not found")
+    base_path = os.path.dirname(__file__)
+    css_path = os.path.join(base_path, "DEADLOCK.css")
+
+    with open(css_path, "r", encoding="utf-8") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 # Title
