@@ -18,11 +18,11 @@ st.title("☄️ NASA NEO Hazard Prediction")
 
 # Load model & scaler
 model = joblib.load(
-    r"C:\Users\HP\vscode\DEADLOCK\neo_random_forest_model.pkl"
+    r"neo_random_forest_model.pkl"
 )
 
 scaler = joblib.load(
-    r"C:\Users\HP\vscode\DEADLOCK\neo_scaler.pkl"
+    r"neo_scaler.pkl"
 )
 
 
